@@ -40,21 +40,31 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
+# highlight:
+#   enable: true
+#   line_number: true
+#   auto_detect: false
+#   tab_replace: ''
+#   wrap: true
+#   hljs: false
+# prismjs:
+#   enable: false
+#   preprocess: true
+#   line_number: true
+#   tab_replace: ''
+
 highlight:
   enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
+  auto_detect: true
+  line_number: false  # This value must be `false`
+  wrap: false         # This value must be `false`
+  tab_replace: '    ' # 4 spaces
+  hljs: true          # This value must be `true`
 prismjs:
   enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -97,7 +107,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: pure
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -105,3 +115,19 @@ deploy:
   type: git
   repo: https://github.com/quechenping/quechenping.github.io.git
   branch: master
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+  plugins:
+    - '@neilsustc/markdown-it-katex'
+  anchors:
+    level: 2
+    collisionSuffix: 't'
+    permalink: false
+    permalinkClass: header-anchor
+    permalinkSymbol: ''
