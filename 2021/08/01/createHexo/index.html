@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Title -->
+<title>Hexo、github搭建博客学习 - 小阙的博客</title>
+
+<!-- Icon -->
+<link rel="icon" href="https://cdn.jsdelivr.net/npm/bsi@0.0.2/favicon/128x128.png">
+
+<!-- Fonts -->
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null, this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@0;1&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"></noscript>
+
+
+
+<!-- Style -->
+
+<link rel="stylesheet" href="/styles/main.css">
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-pure@1.0.1/dist/main.css"> -->
+
+
+
+    <meta name="generator" content="Hexo 5.4.0"></head>
+    <body>
+        <div class="main gt-bg-theme-color-first">
+            <div class="main-content">
+                <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="https://cdn.jsdelivr.net/npm/bsi@0.0.2/favicon/512x512.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            
+        </div>
+    </div>
+    <button aria-label="Navbar Toggler" class="navbar-toggler" type="button" id="changeNavbar">
+        <i class="gt-c-content-color-first" style="font-size: 18px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18px" fill="currentColor">
+                <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" />
+            </svg>
+        </i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center; ">
+            
+                <div class="nav-item">
+                    <a href="/" class="menu gt-a-link" target="_self">首页</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/archives/" class="menu gt-a-link" target="_self">归档</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/tags/" class="menu gt-a-link" target="_self">标签</a>
+                </div>
+            
+                <div class="nav-item">
+                    <a href="/friends/" class="menu gt-a-link" target="_self">友链</a>
+                </div>
+            
+        </div>
+    </div>
+</nav>
+
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = function() {
+        let element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else { 
+            element.style.display = 'none';
+        }
+    }
+</script>
+                <div class="post-container">
+    <div class="post-detail gt-bg-theme-color-second gt-c-content-color-first">
+        <article class="gt-post-content">
+            <h1 class="post-title">Hexo、github搭建博客学习</h1>
+            <div class="post-info">
+                <time class="post-time gt-c-content-color-first">
+                    · 2021-08-01 ·</time>
+                
+                    
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0/" class="post-tag">
+                            #学习</a>
+                    
+                
+            </div>
+            <hr>
+            <div class="post-content gt-c-content-color-first">
+                <h2 id="Hexo简介">Hexo简介</h2>
+<p>Hexo是一款基于Node.js的静态博客框架，可以方便的生成静态网页托管在GitHub和Coding上，是搭建博客的首选框架</p>
+<h3 id="1-安装依赖">1. 安装依赖</h3>
+<ol>
+<li>先安装 git、node（不会的自行百度）</li>
+<li>安装hexo</li>
+</ol>
+<pre><code class="hljs bash">npm install -g hexo-cli</code></pre>
+<p><strong>hexo -v</strong> 查看一下版本</p>
+<h3 id="2-初始化hexo">2. 初始化hexo</h3>
+<p>进入任意文件夹下执行如下代码（代码存放位置文件夹）</p>
+<pre><code class="hljs bash">hexo init myblog</code></pre>
+<p><strong>myblog</strong> 为文件夹名称</p>
+<pre><code class="hljs bash"><span class="hljs-built_in">cd</span> myblog   //进入这个myblog文件夹
+npm install</code></pre>
+<h4 id="新建完成后，指定文件夹目录下有：">新建完成后，指定文件夹目录下有：</h4>
+<ul>
+<li>node_modules: 依赖包</li>
+<li>public: 存放生成的页面</li>
+<li>scaffolds: 生成文章的一些模板</li>
+<li>source: 用来存放你的文章,即编写该目录下的md文件</li>
+<li>themes: 主题</li>
+<li>_config.yml: 博客的配置文件</li>
+</ul>
+<p>可以在根目录 <strong>package.json</strong> 下查看运行命令</p>
+<h4 id="以下几种常用命令">以下几种常用命令</h4>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hexo clean</td>
+<td>清除打包文件</td>
+</tr>
+<tr>
+<td>hexo generate</td>
+<td>打包当前文件,类似yarn build</td>
+</tr>
+<tr>
+<td>hexo server</td>
+<td>运行本地环境，基于generate的build文件</td>
+</tr>
+<tr>
+<td>hexo deploy</td>
+<td>发布文件到线上</td>
+</tr>
+</tbody>
+</table>
+<p>执行顺序为 <strong>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo server &amp;&amp; hexo deploy</strong><br>
+执行完 <strong>hexo server</strong> 即可打开 <strong>localhost:4000</strong> 查看博客</p>
+<h3 id="3-连接hexo和github">3. 连接hexo和github</h3>
+<h5 id="至此本地hexo项目已经跑起来了，只需要在github上引用本地代码即可">至此本地hexo项目已经跑起来了，只需要在github上引用本地代码即可</h5>
+<h4 id="1-首先在github上注册账号，如有账号则直接登陆">1. 首先在github上注册账号，如有账号则直接登陆</h4>
+<ol>
+<li>
+<p>点击 <strong>New repository</strong> 创建一个新的仓库</p>
+</li>
+<li>
+<p>创建一个和你用户名相同的仓库，后面加 <strong>.github.io</strong>，只有这样，将来要部署到GitHub page的时候，才会被识别，也就是 <strong><a target="_blank" rel="noopener" href="http://xxxx.github.io">xxxx.github.io</a></strong></p>
+</li>
+</ol>
+<h4 id="2-生成SSH添加到GitHub">2. 生成SSH添加到GitHub</h4>
+<ol>
+<li>终端中输入</li>
+</ol>
+<pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;yourname&quot;</span>
+git config --global user.email <span class="hljs-string">&quot;youremail&quot;</span></code></pre>
+<ol start="2">
+<li>然后创建SSH,一路回车</li>
+</ol>
+<pre><code class="hljs bash">ssh-keygen -t rsa -C <span class="hljs-string">&quot;youremail&quot;</span></code></pre>
+<p>如下图<br>
+<img src="/images/createSSH.jpg" alt="createSSH"></p>
+<p>ssh，简单来讲，就是一个秘钥，其中，<strong>id_rsa</strong>是你这台电脑的私人秘钥，不能给别人看的，<strong>id_rsa.pub</strong>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上</p>
+<p>而后在GitHub的 <strong>setting</strong> 中，找到 <strong>SSH keys</strong> 的设置选项，点击<strong>New SSH key</strong> ,把你的 <strong>id_rsa.pub</strong> 里面的信息复制进去。</p>
+<p>打开终端，执行如下命令检查是否成功</p>
+<pre><code class="hljs bash">ssh -T git@github.com</code></pre>
+<h3 id="4-将hexo部署到GitHub">4. 将hexo部署到GitHub</h3>
+<p>这一步，我们就可以将hexo和GitHub关联起来，也就是将hexo生成的文章部署到GitHub上，打开站点配置文件 <strong>_config.yml</strong>，翻到最后添加如下代码，xxx为github名称</p>
+<pre><code class="hljs bash">deploy:
+  <span class="hljs-built_in">type</span>: git
+  repo: https://github.com/xxx/xxx.io.git
+  branch: master</code></pre>
+<p>然后执行如下命令</p>
+<pre><code class="hljs bash">hexo clean
+hexo generate
+hexo deploy</code></pre>
+<p>得到如下结果则为成功,打开 <strong><a target="_blank" rel="noopener" href="http://yourname.github.io">http://yourname.github.io</a></strong> 即可看到你的博客嘞。</p>
+<p><img src="/images/deploy.jpg" alt="deploy" title="deploy"></p>
+<h3 id="5-hexo基础配置">5. hexo基础配置</h3>
+<h4 id="1-配置文件-config-yml">1. 配置文件_config.yml</h4>
+<p>在文件根目录下的 <strong>_config.yml</strong>，就是整个hexo框架的配置文件了。可以在里面修改大部分的配置。详细可参考<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">官方的配置</a>描述。</p>
+<h4 id="2-themes">2. themes</h4>
+<p>可以在<a target="_blank" rel="noopener" href="https://hexo.io/themes/">官网</a>中挑选心仪的主题进行下载，放在自己源代码的themes文件夹下，然后在 <strong>_config.yml</strong>下将themes配置改为自己下载的主题名称</p>
+<h4 id="3-新加一篇文章">3. 新加一篇文章</h4>
+<pre><code class="hljs bash">hexo new page board</code></pre>
+<p>系统会自动给你在source文件夹下创建一个board文件夹，以及board文件夹中的 <a target="_blank" rel="noopener" href="http://index.md">index.md</a>，这样你访问的board对应的链接就是http://xxx.xxx/board</p>
+<h4 id="4-保存草稿-draft">4. 保存草稿 draft</h4>
+<p>draft是草稿的意思，也就是你如果想写文章，又不希望被看到，那么可以执行如下</p>
+<pre><code class="hljs bash">hexo new draft newpage</code></pre>
+<p>这样会在source/_draft中新建一个newpage.md文件，如果你的草稿文件写的过程中，想要预览一下，那么可以使用</p>
+<pre><code class="hljs bash">hexo server --draft</code></pre>
+<p>在本地端口中开启服务预览，如果你的草稿文件写完了，想要发表到线上时</p>
+<pre><code class="hljs bash">hexo publish draft newpage</code></pre>
+<h3 id="6-git分支进行多终端工作">6. git分支进行多终端工作</h3>
+<p>不能把文章只放在一台电脑上保存，这样换设备就无法更新博客</p>
+<p>因此把hexo项目放git上进行管理</p>
+<h4 id="hexo机制">hexo机制</h4>
+<p><strong>hexo deploy</strong> 上传部署到github的其实是hexo编译后的文件，是用来生成网页的，不包含源文件（git只存了public文件夹下的文件），所以我们需要把开发时需要的所有文件都存在git上</p>
+<ol>
+<li>
+<p>首先在git的同名项目下创建一个新分支，假设命名为hexo</p>
+</li>
+<li>
+<p>然后在这个仓库的settings中，选择默认分支为hexo分支（这样每次同步的时候就不用指定分支，比较方便）</p>
+</li>
+<li>
+<p>然后将代码clone到本地，把除了.git 文件夹外的所有文件都删掉</p>
+</li>
+<li>
+<p>把之前我们写的博客源文件全部复制过来，除了.deploy_git。这里应该说一句，复制过来的源文件应该有一个.gitignore，用来忽略一些不需要的文件，如果没有的话，自己新建一个，在里面写上如下，表示这些类型文件不需要git:</p>
+</li>
+</ol>
+<pre><code class="hljs bash">.DS_Store
+Thumbs.db
+db.json
+*.<span class="hljs-built_in">log</span>
+node_modules/
+public/
+.deploy*/</code></pre>
+<p>注意，如果你之前克隆过theme中的主题文件，那么应该把主题文件中的.git文件夹删掉，因为git不能嵌套上传，最好是显示隐藏文件，检查一下有没有，否则上传的时候会出错，导致你的主题文件无法上传，这样你的配置在别的电脑上就用不了了。</p>
+<p>然后git提交三步走，此时即将代码放在git上管理<br>
+切换电脑后，按照本文档从头再走一遍安装的依赖，然后拉下git上的文档代码，即可编写</p>
+<h3 id="7-疑难杂症">7. 疑难杂症</h3>
+<h4 id="hexo中图片上传">hexo中图片上传</h4>
+<p>在source中添加images文件夹存放图片文件<br>
+在_config.yaml 中设置</p>
+<pre><code class="hljs bash">post_asset_folder: <span class="hljs-literal">true</span></code></pre>
+<p>图片路径引用为 <strong>/images/deploy.jpg</strong> 即可</p>
+<h3 id="8-参考文档">8. 参考文档</h3>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/jscs/p/13582883.html">hexo史上最全搭建教程</a></p>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/">hexo官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://markdown.com.cn/">markdown官网</a></p>
+
+            </div>
+        </article>
+    </div>
+    <br>
+    
+    
+</div>
+                <div class="site-footer gt-c-content-color-first">
+    <div class="footer-main">
+        <!-- 建议保留版权信息或者添加主题信息到友链，感谢您的理解 -->
+        <!-- 文件位置：layout/_includes/footer.ejs -->
+        <span style="text-align: right; float: right;">Theme <a 
+            href="https://github.com/renbaoshuo/hexo-theme-pure" target="_blank">Pure</a> | Powered by <a 
+            href="https://hexo.io" target="_blank">Hexo</a></span>
+        <span style="text-align: left;">小阙的博客
+</span>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </body>
+</html>
